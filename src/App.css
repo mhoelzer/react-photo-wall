@@ -11,9 +11,16 @@ body {
 }
 
 header, .collage {
-    display: flex;
     flex-wrap: wrap;
+    display: flex;
     justify-content: center;
+}
+
+header {
+    top: 0;
+    position: sticky;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: orange;
 }
 
 img {
