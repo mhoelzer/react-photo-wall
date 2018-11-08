@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import './App.css';
 
 // This URL can be combined with an photo id to fetch an photo.
+                                      // 200 is the image width
 const PHOTO_URL = "https://picsum.photos/200?photo="; // img tag src img 
 // This URL can be used to get an array of objects that contain information
 // about various photos.
-const PHOTO_LIST_URL = "https://picsum.photos/list"; // 1 inside fetch 
+const PHOTO_LIST_URL = "https://picsum.photos/list"; // first inside fetch 
 
 class App extends Component {
   // 1. Declare a state object that will be used to track an array of photos
@@ -33,16 +34,12 @@ class App extends Component {
       <React.Fragment>
         <header>
           <h1>Photo Wall</h1>
-          <p>
-            Start by reading App.jsx and completing the numbered steps.
-            Afterward, delete this paragraph. Then, open up App.css and
-            complete the instructions there.
-          </p>
         </header>
         <div className="collage">
             {/* We use map here because Array.prototype.map is an expression,
               * and for loops are not. You'll learn more about this soon! 
               */}
+                      {/* changing all instrances of photo (here and in url) makes the photos different; same with adding a ? or ?random= between phto_url and photo.id. why? is it cause fo the weird url and it's like wtf do i do? */}
             {photos.map(photo => 
                 <img alt={/* 3. Fill me in with the photo's filename */ photo.filename}
                      key={/* 4. Fill me in with the photo's id */ photo.id}
